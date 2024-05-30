@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>설문조사</h3>
+    <form action="" method="post">
+        <p>
+         <label for="name">이름</label><input type="text">
+         <label for="email">이메일</label><input type="email" placeholder="love@example.com" name="email" required>
+        </p>
+    </form>
+
+    <h3>나이</h3>
+    <form action="">
+        <label for=""><input type="radio" name="age" value="10대">10대</label>
+        <label for=""><input type="radio" name="age">20대</label>
+        <label for=""><input type="radio" name="age">30대</label>
+        <label for=""><input type="radio" name="age">40대</label>
+        <label for=""><input type="radio" name="age">50대</label>
+        <label for=""><input type="radio" name="age">60대 이상</label>
+    </form>
+
+    <h3>원하는 강의(복수응답가능)</h3>
+    <form action="">
+        <label for=""><input type="checkbox" name="class">html</label>
+        <label for=""><input type="checkbox" name="class">jacascript</label>
+        <label for=""><input type="checkbox" name="class">css</label>
+    </form>
+
+    <form action="">
+        <textarea name="content" id="" placeholder="남길 말?" rows="20" cols="45"></textarea>
+        <div>
+        <input type="submit" value="제출">
+        <input type="submit" value="취소">
+        </div>
+    </form>
+</body>
+</html>

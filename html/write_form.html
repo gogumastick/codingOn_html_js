@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판이라고 하지</title>
+</head>
+<body>
+    <h2>글쓰기</h2>
+    <form action="write.jsp" method="post">
+      <p>
+        <input type="text" name="title" id="" placeholder="제목을 입력해주심이 어떰" size="50" required>
+
+      </p>
+      <p>
+        <!--여러줄 글 입력 rows: 행수(줄수), cols: 열수-->
+        <textarea name="content" id="" rows="5" cols="50" placeholder="일단 적어봐" required></textarea>
+
+      </p>
+      <p>
+        <input type="file" name="uploadfile">
+
+      </p>
+      <div>
+        <input type="submit" value="등록">
+        <input type="reset" value="취소">
+      </div>
+    </form>
+    
+</body>
+</html>

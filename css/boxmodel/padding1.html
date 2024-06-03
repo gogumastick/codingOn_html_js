@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>안쪽 여백</title>
+    <Style>
+        *{
+            margin: 0px;
+        }
+        #wrap{
+            width: 1000px;
+            height: 600px;
+            /* right left >> auto
+                요소의 너비값을 뺀 나머지 공간의 좌, 우 마진을 똑같이 맞춘다 */
+            margin: 20px auto;
+            border: 1px solid #aaa;
+        }
+        div{
+
+
+        }
+        #box1{
+            width: 200px;
+            background-color: blue;
+            color: white;
+            /* padding: 8px 80px; */
+            margin: 10px auto ;
+            border: 5px solid #222;
+            /* 10px 20px 10px 20px */
+            padding: 10px 20px;
+            
+        }
+        #box2{
+            width: 200px;
+            background-color: blue;
+            color: white;
+            /* padding: 8px 80px; */
+            margin: 10px auto;
+            border: 5px solid #222;
+            padding: 10px 20px 10px 20px;
+        }
+    </Style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="box1">
+            패딩(padding)관련 컨텐츠 영역과 테두리 사이의 여백을 말해
+        </div>
+        <div id="box2">
+            패딩(padding)관련 컨텐츠 영역과 테두리 사이의 여백을 말해
+        </div>
+    </div>
+
+</body>
+</html>

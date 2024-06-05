@@ -1,0 +1,27 @@
+#container{
+    width: 500px;
+    margin: 0 auto;
+}
+ul li{
+    list-style: none;
+    margin: 10px;
+}
+div{
+    margin: 10px 0px 0px 0px ;
+}
+fieldset{
+    margin-bottom: 16px;
+}
+ul li label{
+    width: 100px;
+    float: left;
+}
+select{
+    width: 150px;
+    height: 25px;
+}
+button{
+    padding: 5px 10px;
+    cursor: pointer; /* 마우스포인터 >> 손모양 */
+}
+

@@ -1,0 +1,245 @@
+@charset "utf-8";
+/* 공통스타일 모바일 가준 */
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: beige;
+}
+ul li{
+    list-style: none;
+}
+#container{
+    width: 100%;
+    margin: 0 auto;
+}
+header{
+    height: 240px;
+    background-color: navy;
+}
+header #logo{
+    width: 10%;
+    height: 240px;
+    float: left;
+    margin-top: 5px;
+    padding-left: 20px;
+}
+header #logo h1{
+    font-size: 26px;
+}
+
+header #logo h1 a:hover{
+    color: skyblue;
+
+}
+header nav{
+    width: 76%;
+    height: 240px;
+    float: left;
+    margin-top: 40px;
+}
+header nav ul{
+    text-align: center;
+}
+header nav ul li a{
+    display: block;
+    padding: 12px;   
+}
+header nav ul li a:hover{
+    background-color: beige;
+    color: navy;
+    border-radius: 3px;
+    font-weight: bold;
+
+}
+#container #main{
+    width: 90%;
+    margin: 0 auto;
+}
+/* 가변 크기(%) 부모의 상대비율대로 크기를 정함 */
+/* 90% x 0.9 = 81% */
+#container #main #contents{
+    width: 90%;
+    margin: 0 auto;
+    text-align: justify;
+    
+}
+#container #main #contents h2{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+footer{
+    margin-top: 100px;
+    height: 150px;
+    border-top: 2px solid black;
+
+}
+footer #footer_menu{
+    margin: 10px 20px ;
+}
+footer #footer_menu li{
+    float: left;
+    margin: 15px 0;
+    padding: 0 10px;
+    border-right: 1px solid darkgray;
+}
+footer #footer_menu li a{
+    color: darkgrey;
+}
+footer #footer_menu li:nth-child(4){
+    border: none;
+}
+/* index 스타일 */
+#main #contents .main_pic{
+    width:400px;
+    margin: 20px auto;
+}
+#main #contents .main_pic img{
+    width: 400px;
+    height: 360px;
+}
+/* product 스타일 */
+#main #contents h3{
+    color: red;
+}
+#main #contents #watermelon img, #starwberry img{
+    width: 200px;
+    height: 200px;
+    border-radius: 6px;
+}
+/* bord 스타일 */
+#contents table{
+    border: 1px solid black;
+    width: 500px;
+    border-collapse: collapse;
+}
+#contents table thead{
+    background-color: skyblue;
+}
+#contents table tr, td{
+    border: 1px solid black;
+    padding: 0;
+    text-align: center;
+}
+#contents table tr, td:nth-child(2){
+    text-align: left;
+    padding-left: 10px;
+}
+#contents table th{
+    text-align: center;
+}
+
+#contents table tr, th{
+    border: 1px solid black;
+    padding: 0;
+}
+/* login 스타일 */
+#contents form{
+    border: 1px solid gray;
+}
+#contents form label{
+    width: 80px;
+    float: left;
+}
+#contents form ul li{
+    margin: 20px;
+}
+#contents form input[type='text'],input[type='password'] {
+    width: 250px;
+    padding-left: 5px;
+}
+#contents form input[type='submit'], input[type='reset']{
+    width: 50px;
+    padding: 5px;
+}
+
+
+
+
+/* pc기준 */
+@media screen and (min-width: 800px) {
+    header{
+        height: 80px;
+    }
+    header #logo{
+        height: 80px;
+        padding-left: 40px;
+        line-height: 80px;
+        margin-top: 0;
+    }
+    header nav{
+        height: 80px;
+        padding-left: 40px;
+        line-height: 80px;
+        margin-top: 0;
+    }
+    header nav ul li{
+        float: left;   
+    }
+    header nav ul li a{
+        padding: 0 30px; 
+    }
+    #container #margin{
+        width: 1000px;
+    }
+    #container #main #contents{
+        width: 900px;
+    }
+    #main #contents h2{
+        margin-top: 30px;
+        font-size: 26px;
+    }
+    #main #contents .main_pic{
+        width: 600px;
+        margin: 20px auto;
+    }
+    #main #contents .main_pic img{
+        width: 600px;
+        height: 550px;
+        border-radius: 4px;
+    }
+    /* product 스타일 */
+    #main #contents h3{
+        color: red;
+        display: inline-block;
+        margin-top: 20px;
+    }
+    #contents #watermelon, #starwberry{
+        height: 300px;
+    }
+    #contents #watermelon img, #starwberry img{
+        float: left;
+        margin: 20px;
+        width: 200px;
+        height: 200px;
+        margin-right: 16px;
+        border-radius: 6px;
+    }
+    /* bord 스타일 */
+    #main #contents table{
+        margin: 0 auto;
+    }
+    /* login 스타일 */
+    #contents form{
+        width: 400px;
+        border: 1px solid gray;
+        padding: 0 200px;
+    }
+    #contents form label{
+        width: 80px;
+        float: left;
+    }
+    #contents form ul li{
+        margin: 20px ;
+    }
+    #contents form input[type='text'],input[type='password'] {
+        width: 250px;
+    }
+    #contents form input[type='submit'], input[type='reset']{
+        width: 50px;
+        padding: 5px;
+    }
+}

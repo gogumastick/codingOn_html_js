@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문(while) 예제</title>
+</head>
+<body>
+    <script>
+        // console.log("식사는 하셨어?");
+
+        /*
+          반복문(while)
+
+          while(조건식){
+                조건식이 true면 실행
+            }
+        */
+
+        // let i=0; // 반복 변수
+        // while(i<10){ //i=10
+        //     document.write(i+". "+"식사는 하셨어?<br>");
+        //     i++; // 증가 값
+        // }
+
+        // 1부터 10까지 더하기
+        // let i=1; 
+        // while(i<=10){
+        //     console.log(1);;
+        //     i++; // 증가 값
+        // }
+
+        // let sumVal=0;
+        // sumVal=sumVal+1; // 1=0+1
+        // sumVal=sumVal+2; // 3=1+2
+        // sumVal=sumVal+3; // 6=3+3
+
+        // console.log(sumVal);
+
+       
+        let i=0;  // 반복 변수
+        let sumVal=0; // 합계 변수
+        while(i<10){
+            i++; // 증가 값            
+            sumVal+=i;
+            console.log("i="+i+", sumVal="+sumVal);
+            // i++; // 증가 값
+                 // >> 순서에 따라 계산
+        }
+        console.log("합계:"+sumVal);
+
+        /*
+        초기값
+        while(종료값 true){
+            if(조건식){
+            break;
+            }
+            증가값
+        }
+        */
+        /*
+        let i=0;
+        while(true){
+            if(i>0){
+            break;
+            }
+            1++;
+        */
+
+
+    </script>
+</body>
+</html>

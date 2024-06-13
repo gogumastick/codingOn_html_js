@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단 예제</title>
+    <style>
+        div{
+            float: left;
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>구구단</h2>
+    <script>
+        for(let i=2; i<=9; i++){
+            document.write("<div>")
+            for(let j=1; j<=9; j++){
+                document.write(i+"x"+j+"="+(i*j)+"<br>")
+            }
+            document.write("</div>")
+        }
+    </script>
+    
+</body>
+</html>

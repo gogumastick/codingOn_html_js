@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math 객체</title>
+</head>
+<body>
+    <h2>Math 객체의 주요 함수</h2>
+    <script>
+        document.write(`반올림(값:95.5555) : ${Math.round(95.5555)}<br>`)
+        document.write(`올림(값:95.2555) : ${Math.ceil(95.2555)}<br>`)
+        document.write(`내림(값:95.5555) : ${Math.floor(95.5555)}<br>`)
+
+        // 양수&음수 > 양수로 변환
+        document.write(`절대값(값:-95.5555) : ${Math.abs(-95.5555)}<br>`)
+
+        // 무작위 수 > 0.0 <=0 무작위 수 < 1
+        document.write(`무작위 수 : ${Math.random()}<br>`)
+        document.write(`무작위 수(주사위 같은 변수의 객수가 6인 경우) : ${Math.random()*6+1}<br>`)
+
+        // eval()함수  : 인자(매개값)로 문자열 표현식을 수식으로 계산함
+        document.write(`eval()) : ${eval("10+20")}<br>`)
+
+        // 1~10까지의 자연수 중 무작위 수 추출하기
+        let rand = Math.floor(Math.random()*10)+1;
+        document.write(`자연수 : ${rand}<br>`);
+
+        // 주사위
+        for(let i=1; i<=10; i++){
+        let dice= Math.floor(Math.random()*6)+1;
+        document.write(`주사위 눈 : ${dice}<br>`);
+        }
+       
+
+        
+
+
+    </script>
+    
+</body>
+</html>

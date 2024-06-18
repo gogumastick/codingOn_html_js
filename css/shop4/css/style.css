@@ -48,6 +48,15 @@ header .navbar_menu li:hover{
     border-radius: 4px;
     /* color: navy; */
 }
+header .navbar_toggleBtn{
+    position: absolute;
+    right: 30px;
+    font-size: 1.5em;
+}
+header .navbar_toggleBtn .active{
+    display: flex;
+
+}
 header nav ul li a{
     display: block;
     padding: 2px; 

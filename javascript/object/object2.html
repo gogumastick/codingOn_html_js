@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 자료형</title>
+</head>
+<body>
+    <h2>객체 자료형</h2>
+
+    <script> 
+        // 객체(object) : 프로그램에서 인식 할 수 있는 모든 대상
+        // 복합 자료형 > 변수, 배열, 함수를 모두 담을 수 있음
+        // json의 형태 > 키:값
+        let car={
+            brand : "테슬라",
+            color : "은빛찬란",
+            cc:5000,
+            
+            charge: function(){
+                alert("전기 먹음");
+                
+            }
+        }
+        // 객체 사용(객체이름.속성, 객체이름.함수)
+        document.write(`브랜드 이름은 ${car.brand}<br>`);
+        document.write(`차량 색상은 ${car.color}<br>`);
+        document.write(`배기량은 ${car.cc}cc<br>`);
+        car.charge();
+
+
+    </script>
+    
+</body>
+</html>

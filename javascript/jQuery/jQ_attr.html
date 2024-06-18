@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 예제</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        .box{
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 10px;
+        }
+        .button{
+            padding-left: 85px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="" alt="버튼 누르시게나">
+    </div>
+    <div class="button">
+        <button onclick="changeImg('oranges-1995079_640')">귤</button>
+        <button onclick="changeImg('grapes-8306833_640')">포도</button>
+        <button onclick="changeImg('peaches-4375600_640')">복숭아</button>
+
+    </div>
+    <script>
+        function changeImg(name){
+            $('img').attr('src',`images/${name}.jpg`);
+        }
+    </script>
+    
+</body>
+</html>

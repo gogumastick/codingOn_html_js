@@ -33,14 +33,38 @@
         // }
 
         let num= prompt("숫자만 인식","아라비아 숫자");
-        num=numebr(num)
 
-        if(num%2!==0){
-            document.write("홀수 입니다<br>");
+        //취소 버튼을 누름 or 문자 입력 시 취소처리
+        /*if(num==null||isNaN(num)||num<0){ 
+            document.write("입력이 취소됨")
         }else{
-            document.write("짝수 입니다<br>");
+            num=Number(num)
+
+            if(num%2!==0){
+                document.write("홀수 입니다<br>");
+            }else{
+                document.write("짝수 입니다<br>");
+            }
+            document.write("이 숫자의 값은 ",num,"입니다<br>")
         }
-        document.write("이 숫자의 값은 ",num,"입니다<br>")
+        */
+        if(num!==null && !isNaN(num) && num>=0){
+            num=Number(num)
+
+            if(num%2===0){
+                document.write("홀수 입니다<br>");
+            }else{
+                document.write("짝수 입니다<br>");
+            }
+            // document.write("이 숫자의 값은 ",num,"입니다<br>");
+            document.write(`이 숫자의 값은 ${num} 입니다<br>`);
+
+        }else{
+            document.write("입력이 취소됨")
+        }
+
+
+
         
         
         

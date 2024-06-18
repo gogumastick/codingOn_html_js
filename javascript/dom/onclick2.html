@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 자바스크립트 객체의 속성인 onclick 이용해서 이벤트 실행 -->
+     <div id="content">
+        <img src="images/peaches-4375600_640.jpg" alt="복숭아" id="fruit">
+     </div>
+    
+     <script>
+        let fruitImg = document.querySelector("#fruit");
+        // changePic() 함수 호출 > 아래와 같이 ()를 제외한 사유: 프로그램 위로 올라와서 실행됨
+        // fruitImg.onclick = changePic; 
+
+        // function changePic(){
+        //     fruitImg.src="images/grapes-8306833_640.jpg";
+        // }
+        
+        // toggle 기능 구현하기
+        let sw = true; // 상태변수
+        fruitImg.onclick=function(){
+            if(sw){
+                fruitImg.src="images/grapes-8306833_640.jpg";
+                sw=false;
+            }else{
+                fruitImg.src="images/peaches-4375600_640.jpg";
+                sw=true;
+            }
+            
+        }
+     </script>
+</body>
+</html>

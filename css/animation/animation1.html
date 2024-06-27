@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation 예제</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 50px;
+            
+        }
+
+        #box1{
+            background-color: aquamarine;
+
+            /* 애니메이션 이름 */
+            /* animation-name: changeBg; */
+            /* 지속 시간 */
+            /* animation-duration: 3s; */
+            /* 반복 횟수 */
+            /* 무한반복 > infinite */
+            /* animation-iteration-count: infinite; */
+
+            animation: changeBg 3s infinite;
+
+        }
+        
+        #box2{
+            background-color: purple;
+            /* animation-name: rotate;
+            animation-duration: 1s;
+            animation-iteration-count: infinite; */
+
+            animation: rotate 1s infinite;
+
+        }
+
+        @keyframes changeBg {
+            /* 0% */
+            from{
+                background-color: aquamarine;
+                border-radius: 0;
+            }
+            50%{
+                background-color: gold;
+                border-radius: 15%;
+            }
+            /* 100% */
+            to{
+                background-color: green;
+                /* 100px * 30% */
+                border-radius: 30%;
+            }
+        }
+
+        @keyframes rotate{
+            form{
+                transform: rotate(0);
+            }
+            to{
+                transform: rotate(90deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    
+</body>
+</html>

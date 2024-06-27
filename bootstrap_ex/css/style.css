@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+/* PC 기준 */
+html{
+    /* 16px이 default */
+    font-size: 16px;
+}
+
+h4{
+    color: green;
+    font-size: 1.5rem;
+}
+
+/* .col-4 .card{
+    outline: none;
+} >> 실패 */
+
+@media screen and (max-width:768px){
+    html{
+        font-size: 14px;
+    }
+    .col-4{
+        width: 50%;
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width:480px){
+    html{
+        font-size: 12px;
+    }
+    .col-4{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}

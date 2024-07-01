@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // class
+        class Cat{
+            // 생성자(constructor) : 클래스의 인스턴스 생성 시 생성되는 것(선택)
+            constructor(name, age) {
+                // 속성 var, const, let 이용 안하는게 일반적
+                this. name = name;
+                this. age = age;
+            }
+            // 메소드(function 키워드를 사용하지 않음)
+            mew(){
+                console.log(this.name,'야옹');
+            }
+            eat(){
+                console.log('식샤중입니다');
+            }
+        }
+
+        const cat1 = new Cat('대박', '넷');
+        const cat2 = new Cat('하트', '다섯');
+        const cat3 = new Cat('비트', '여섯');
+        cat1.mew();
+        cat1.eat();
+        cat2.mew();
+        cat3.mew();
+
+        // 상속
+        class House{
+            constructor(str){
+                this.str = str;
+            }
+            name(){
+                console.log(`${this.str}에 살지요`);
+            }
+            door(){
+                console.log('문을 여닫지요');
+            }
+            window(){
+                console.log('창을 여닫지요');
+            }
+        }
+        const myHouse = new House('아파트');
+        myHouse.name();
+        myHouse.door();
+        myHouse.window();
+
+        class Apartment extends House{
+
+            // super() : 부모 클래스의 생성자를 자식 클래스 생성자에서 호출할 때 super() 씀
+            // super() 사용시 부모 클래스의 생성자에 필요한 인수들을 모두 써줘야함
+            // 만약 자식클래스에서 생성자가 필요없다면 생성자를 안써줘도 됨. 이때는 자동으로 부모클래스의 생성자를 호출
+
+            constructor(str, floor){
+                super(str); // 부모의 생성자를 가져온다. 제일 위에 있어야한다 아니하면 오류 발생
+                this.floor = floor;
+            }
+
+            // 메서드
+            elevator(){
+                console.log(`${this.floor}층까지 승강기가 있으`);
+            }
+
+            // 메서드 오버라이딩 : 자식클래스에서 부모클래스의 메서드를 재정의할 때 사용하는 언어
+            window(){
+                super.window(); // super키워드를 사용해 부모 클래스의 메서드에 접근
+                console.log('절대 안열려');
+            }
+        }
+        const myApart = new Apartment('짜이아파트',21);
+        
+        myApart.name();
+        myApart.elevator();
+        myApart.window();
+
+        // 실습
+        class Shape{
+            constructor(width,height){
+                this. width=width;
+                this. height=height;
+            }
+            getArea(){
+                return this.width*this.height;
+            }
+ 
+        }
+            let rect1 = new Shape(3,4);
+            console.log(rect1.getArea());
+            
+
+
+        // 실습2
+        console.log('실습2');
+
+        class Rectangle extends Shape{
+            constructor(width,height){
+                super(width, height);
+                
+            }
+            getDiagonal() {
+                return Math.sqrt(this.width ** 2 + this.height ** 2);
+            }
+        }
+            let rec2 = new Rectangle(3, 4);
+            console.log(rec2.getDiagonal());
+
+        class Triangle extends Shape{
+            constructor(width,height){
+                super(width, height);
+                
+            }
+            getArea(){
+                return this.width*this.height*0.5;
+            }
+
+
+        }
+            let tri = new Triangle(3,4);
+            console.log(tri.getArea());
+
+        class Circle extends Shape{
+            constructor(width,height,radius){
+                super(width, height);
+                this.radius = radius;
+                
+            }
+            getArea(){
+                return this.width*this.height*this.radius*3.14;
+            }
+        }
+            let cir = new Circle(1.5);
+            console.log(cir.getArea());
+        
+    </script>
+</body>
+</html>

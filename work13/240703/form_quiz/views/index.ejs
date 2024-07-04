@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>get으로 정보 받기 실습</h4>
+    <form action="/getForm" method="GET">
+        <label>이름</label>
+        <input type="text" placeholder="이름" name="name" required><br/>
+        <fieldset>
+            <legend>성별</legend>
+            <input type="radio" name="gender" value="남자">남성
+            <input type="radio" name="gender" value="여자">여성<br/>
+        </fieldset><br/>
+        <fieldset>
+            <legend>생년월일</legend>
+            <select name="year" id="">
+                <% for(let i= 1970; i<= 2024; i++){ %>
+                    <option value= "<%= i %>"><%= i %></option>
+                <% } %>
+            </select>년
+            <select name="month" id="">
+                <% for(let i= 1; i<= 12; i++){ %>
+                    <option value= "<%= i %>"><%= i %></option>
+                <% } %>
+            </select>월
+            <select name="date" id="">
+                <% for(let i= 1; i<= 31; i++){ %>
+                    <option value= "<%= i %>"><%= i %></option>
+                <% } %>
+            </select>일
+        </fieldset><br/>
+        <fieldset>
+            <Legend>관심사</Legend>
+            <input type="checkbox" name="hobby" value="여행">여행
+            <input type="checkbox" name="hobby" value="패션">패션
+            <input type="checkbox" name="hobby" value="여행">음식
+        </fieldset><br/>
+
+        <button type="submit">제출</button>
+    </form>
+        
+    
+    <hr/>
+    <h4>post로 정보 받기 실습</h4>
+    <form action="/postForm" method="GET">
+        <label>이름</label>
+        <input type="text" placeholder="이름" name="name" required><br/>
+        <fieldset>
+            <legend>성별</legend>
+            <input type="radio" name="gender" value="남성">남성
+            <input type="radio" name="gender" value="여성">여성<br/>
+        </fieldset><br/>
+        <fieldset>
+            <legend>생년월일</legend>
+            <select name="year" id="">
+                <% for(let i= 1970; i<= 2024; i++){ %>
+                    <option value= "<%= i %>"><%= i %></option>
+                <% } %>
+            </select>년
+            <select name="month" id="">
+                <% for(let i= 1; i<= 12; i++){ %>
+                    <option value= "<%= i %>"><%= i %></option>
+                <% } %>
+            </select>월
+            <select name="date" id="">
+                <% for(let i= 1; i<= 31; i++){ %>
+                    <option value= "<%= i %>"><%= i %></option>
+                <% } %>
+            </select>일
+        </fieldset><br/>
+        <fieldset>
+            <Legend>관심사</Legend>
+            <input type="checkbox" name="hobby" value="여행">여행
+            <input type="checkbox" name="hobby" value="패션">패션
+            <input type="checkbox" name="hobby" value="여행">음식
+        </fieldset><br/>
+        <fieldset>
+            <legend>선택</legend>
+            좋아하는 색 <input type="color" name="color"><br/>
+            좋아하는 숫자 <input type="number" name="number">
+        </fieldset><br/>
+
+        <button type="submit">제출</button>
+    </form>
+
+</body>
+</html>

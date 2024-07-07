@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const PORT = 8000;
 
-// 미들웨어(뷰엔진)
+// 뷰엔진(미들웨어 개념 아님. 셋팅일뿐)
 app.set('view engine','ejs');
 app.set('views','./views');
 

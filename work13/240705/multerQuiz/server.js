@@ -10,6 +10,12 @@ app.set('view engine', 'ejs');
 //http://localhost:8000/uploads/파일명
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
+
+app.get('/', (req,res)=>{
+    res.render('index');
+})
+
+
 //multer세부설정
 const uploadDetail = multer({
     //storage: 저장할 공간에 대한 정보
@@ -29,7 +35,9 @@ const uploadDetail = multer({
         },
     }),
     //limits:파일 용량 제한
-    limits: { fileSize: 1024 * 1024 * 5 }, //5mb제한
+
+    limits: { fileSize: 1024 * 1024 * 10 }, //10mb제한
+
 });
 
 //동적

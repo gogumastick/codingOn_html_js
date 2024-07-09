@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h3>동적 파일 업로드 실습</h3>
+    <form onsubmit="registerFunc(event)">
+
+        <input type="text" id="id" placeholder="아이디" required/><br />
+        <input type="password" id="pw" placeholder="비밀번호" required/><br />
+        <input type="text" id="myName" placeholder="이름" required/><br />
+        <input type="number" id="age" placeholder="나이" required/><br />
+        <input type="file" id="userfile" multiple /><br />
+
+        <button type="submit">업로드</button>
+    </form>
+    <br />
+    <br />
+    <div class="resultBox"></div>
+    <script>
+        const resultBox=document.querySelector(".resultBox");
+        function registerFunc(e) {
+            e.preventDefault(); //기본 제출 동작을 막아줌
+            console.log(e);
+            const id = document.querySelector("#id").value;
+            const pw = document.querySelector("#pw").value;
+            const myName = document.querySelector("#myName").value;
+            const age = document.querySelector("#age").value;
+            const file = document.querySelector('#userfile').files[0];
+            console.log(file);
+            const data = new FormData();
+            // append(key이름, value값)
+            data.append('id', id);
+            data.append('pw', pw);
+            data.append('username', myName);
+            data.append('age', age);
+            data.append('userfile', file);
+
+            axios({
+                method: 'POST',
+                url: '/upload',
+                data: data,
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            }).then((res) => {
+                console.log('res', res);
+                
+                resultBox.innerHTML =
+                `<img src=${res.data.filename} style="width:200px">
+                <div><strong>${id}님 환영</strong></div>
+                <div>비밀번호 : ${pw}</div>
+                <div>이름 : ${myName}</div>
+                <div>나이 : ${age}</div>
+                `;
+            });
+        }
+
+        
+    </script>
+</body>
+</html>

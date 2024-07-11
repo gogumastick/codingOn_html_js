@@ -66,7 +66,7 @@ const storage= multer.diskStorage({
     },
 });
 
-const limits = {fileSize: 1024 * 1024 * 5}, // 5mb제한
+const limits = {fileSize: 1024 * 1024 * 5}; // 5mb제한
 const uploadDetail2 = multer({ storage, limits:limits});
 */
 

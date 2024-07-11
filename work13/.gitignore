@@ -4,3 +4,4 @@ node_modules/
 # 이름명 기준으로 제외 처리 되기 때문에 2개 이상의
 # 같은 폴더가 존재할 때도 제외로 적용
 package-lock.json
+*.env
